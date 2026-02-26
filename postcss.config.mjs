@@ -1,7 +1,6 @@
-const config = {
+export default {
   plugins: {
-    "@tailwindcss/postcss": {},
+    '@tailwindcss/postcss': {}, 
+    'autoprefixer': {}, // O Next.js precisa encontrar este aqui agora
   },
 };
-
-export default config;
