@@ -31,20 +31,7 @@ export default function RootLayout({
         <SmoothScroll>
           {children}
         </SmoothScroll>
-        <Hero />
-        <OverlaySection title="Work"
-          headline="We listen. We craft. We deliver."
-          buttonText="Explore Our Work"
-          buttonHref="#"
-          backgroundImage="https://assets.teenvogue.com/photos/65b7dbffb239029c147012bf/16:9/w_2560%2Cc_limit/cropped-keke-tnv-wm-selects-2.jpg"
-        />
-        <OverlaySection title="Our Work"
-          headline="Stylish production. Seamless execution."
-          buttonText="Stuff we're really good at"
-          buttonHref="#"
-          backgroundImage="https://s.studiobinder.com/wp-content/uploads/2025/09/Ground-Level-Shot-Example-Ground-level-camera-angle-from-Kill-Bill-Vol-1.jpg"
-        />
-        <section className="h-screen bg-zinc-900" /> {/* Seção vazia para teste de scroll */}
+
       </body>
     </html>
   );

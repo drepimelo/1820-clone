@@ -33,7 +33,7 @@ export default function OverlaySection({
       <div className="relative z-10 flex flex-col justify-between min-h-screen p-10 text-white tracking-tighter">
 
         {/* Título topo */}
-        <h2 className="text-sm uppercase tracking-wide left-[20%] translate-x-[-80%] absolute top-10">
+        <h2 className="text-sm uppercase left-[95%] translate-x-[-5%] absolute top-20">
           {title}
         </h2>
 
