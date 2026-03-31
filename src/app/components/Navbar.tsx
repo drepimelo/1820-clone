@@ -57,12 +57,12 @@ export default function Navbar() {
 
         {/* DIREITO: Botões */}
         <div className="flex gap-3">
-          <button className='"bg-white/10 backdrop-blur-md border border-white/40 px-1.5 py-1 text-[12px] font-bold tracking-tighter hover:bg-red-600 hover:text-black transition-all uppercase cursor-pointer pointer-events-auto'>
+          <button className='"bg-white/10 backdrop-blur-md border border-white/40 px-1.5 py-1 text-[12px] font-bold tracking-tighter hover:bg-red-600 hover:text-black transition-all duration-300 uppercase cursor-pointer pointer-events-auto'>
             Contato
           </button>
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="bg-white/10 backdrop-blur-md border border-white/40 px-3 py-1 text-[12px] font-bold tracking-tighter hover:bg-red-600 hover:text-black transition-all uppercase cursor-pointer pointer-events-auto z-90"
+            className="bg-white/10 backdrop-blur-md border border-white/40 px-3 py-1 text-[12px] font-bold tracking-tighter hover:bg-red-600 hover:text-black transition-all duration-300 uppercase cursor-pointer pointer-events-auto z-90"
           >
             {isMenuOpen ? 'Voltar' : 'Menu'}
           </button>

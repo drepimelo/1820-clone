@@ -13,8 +13,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "1820 Productions Clone",
-  description: "Recriando com Next.js e GSAP",
+  title: "Pupila Audiovisual",
+  description: "Empresa junior de audiovisual da Universidade de Brasília. Transformamos o conteúdo da sua empresa em uma obra cinematográfica.",
 };
 
 export default function RootLayout({
