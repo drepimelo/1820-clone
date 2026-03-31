@@ -73,14 +73,13 @@ useGSAP(() => {
         backdrop-blur-xl     /* O desfoque */
         -webkit-backdrop-blur-xl /* Suporte para Safari */
         
-        text-white 
         z-[80]               /* Menor que o z-[70] da Navbar */
         "
       `}
     >
       {/* Links do Menu */}
       <div className="flex flex-col items-start mt-[40px]">
-        {['Home', 'Work', 'Services', 'About', 'BTS', 'Contact'].map((item) => (
+        {['Início', 'Portfolio', 'Trabalhos', 'Sobre', 'Bastidores', 'Contato'].map((item) => (
           <div key={item} className="menu-link opacity-0 w-full ">
             <MenuLink title={item} />
           </div>
@@ -89,10 +88,10 @@ useGSAP(() => {
 
       {/* Rodapé do Menu */}
       <div className="flex flex-col gap-4">
-        <span className="text-[10px] tracking-widest uppercase opacity-40">Socials:</span>
-        <div className="flex gap-4 text-[10px] font-bold tracking-widest uppercase">
+        <span className="text-[10px] tracking-widest uppercase opacity-40">Nos encontre em:</span>
+        <div className="flex gap-4 text-[10px] font-bold tracking-widest uppercase ">
           {['Instagram', 'Vimeo', 'Linkedin', 'Facebook'].map(s => (
-            <a key={s} href="#" className="hover:opacity-50 transition-opacity">
+            <a key={s} href="#" className="hover:!opacity-50 hover:!text-red-600 transition-all duration-300 ">
               {s}
             </a>
           ))}

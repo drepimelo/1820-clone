@@ -5,23 +5,37 @@ export default function Home() {
   return (
     <main>
         <Hero />
-        <OverlaySection title="Work"
-          headline="We listen. We craft. We deliver."
-          buttonText="Explore Our Work"
+        <OverlaySection title="Portfolio"
+          headline="Um catálogo de histórias incríveis."
+          buttonText="Explorar projetos"
+          text_content="Bora dar uma olhadinha em alguns clientes que se encantaram pelos serviços da Pupila?"
           buttonHref="#"
+          id="work"
           backgroundImage="https://assets.teenvogue.com/photos/65b7dbffb239029c147012bf/16:9/w_2560%2Cc_limit/cropped-keke-tnv-wm-selects-2.jpg"
         />
-        <OverlaySection title="Services"
-          headline="Stylish production. Seamless execution."
-          buttonText="Stuff we're really good at"
+        <OverlaySection title="Trabalhos"
+          headline="Produção criativa. Entrega sem complicação."
+          buttonText="Quero detalhes"
+          text_content="Do conceito à tela, cuidamos de tudo. Nossos serviços incluem: planejamento de pré-produção, cinematografia, edição de pós-produção, motion graphics e muito mais. Damos vida à sua visão com criatividade e precisão."
           buttonHref="#"
+          id="services"
           backgroundImage="https://s.studiobinder.com/wp-content/uploads/2025/09/Ground-Level-Shot-Example-Ground-level-camera-angle-from-Kill-Bill-Vol-1.jpg"
         />
-        <OverlaySection title="About Us"
-          headline="We're not a cult. But people do keep coming back."
-          buttonText="Learn More About Us"
+        <OverlaySection title="Sobre nós"
+          headline="Somos uma empresa júnior de audiovisual do DF. "
+          text_content="Criada na Universidade de Brasília, o nosso objetivo é transformar o conteúdo da sua empresa em uma obra cinematográfica. Nossa equipe é formada por universitários que são movidos pela paixão em transformar ideias em histórias, imagens e vídeos que emocionem e te tragam retorno."
+          buttonText="Oi, prazer"
           buttonHref="#"
-          backgroundImage="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgCvW5iwlp_J0nPRivfCo9qVxtIqg9a2mh-KhYIg-ZIGSgr0PwIrWcoALS_eaaCkCRreZO14v1pOQyFNv8UGH4KO4dRc-H4EMqb9AhT70q0Zyg4pEumWcVVYMe3biKfM8f4ZvNBYh8r3Dh1i_mjFuFMiONmSiHrWUxKM64PwF2VtChRORoc9Clt4Pd3ethY/s2532/ca%C3%A7adores%20de%20emo%C3%A7%C3%A3o%20-%201991%20-%20mestreryu.webp"
+          id="about"
+          backgroundImage="https://www.pupilaaudiovisual.com.br/assets/pupila3.png"
+        />
+        <OverlaySection title="Bastidores"
+          headline="Você não viu nada ainda"
+          text_content="Entre takes perfeitos e erros melhores ainda, é aqui que tudo acontece de verdade. Ideias surgem do nada, planos mudam no meio do caminho e o improviso vira destaque. Sem roteiro, sem filtro — só o processo real de transformar caos criativo em algo que vale o play."
+          buttonText="Dar uma olhada"
+          buttonHref="#"
+          id="about"
+          backgroundImage="https://www.pupilaaudiovisual.com.br/assets/Bastidores.png"
         />
         <section className="h-screen bg-zinc-900" /> {/* Seção vazia para teste de scroll */}
     </main>

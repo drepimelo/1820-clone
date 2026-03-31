@@ -22,10 +22,10 @@ export default function Hero() {
     
     <section ref={container} className="h-screen flex items-center justify-center bg-black z-0 overflow-hidden sticky top-0">
       <h1 className="hero-title text-7xl font-bold uppercase tracking-tighter z-1">
-        1820 Productions
+        Pupila Audiovisual
       </h1>
       <iframe
-        src="https://player.vimeo.com/video/309159979?h=60c9c6179c?h=fa32dddc47&autoplay=1&muted=1&loop=1&background=1"
+        src="https://player.vimeo.com/video/825078489?h=dfffef1b79?h=fa32dddc47&autoplay=1&muted=1&loop=1&background=1"
         allow="autoplay; fullscreen; picture-in-picture allowfullscreen"
         className ="absolute top-0 left-0 w-lvw h-lvh object-cover opacity-70 z-0 border-0 scale-175"
   ></iframe>
