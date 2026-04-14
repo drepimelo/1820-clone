@@ -11,7 +11,7 @@ export default function Home() {
           text_content="Bora dar uma olhadinha em alguns clientes que se encantaram pelos serviços da Pupila?"
           buttonHref="#"
           id="work"
-          backgroundImage="https://assets.teenvogue.com/photos/65b7dbffb239029c147012bf/16:9/w_2560%2Cc_limit/cropped-keke-tnv-wm-selects-2.jpg"
+          backgroundImage="https://i.imgur.com/ooURG34.jpeg"
         />
         <OverlaySection title="Trabalhos"
           headline="Produção criativa. Entrega sem complicação."
@@ -19,7 +19,7 @@ export default function Home() {
           text_content="Do conceito à tela, cuidamos de tudo. Nossos serviços incluem: planejamento de pré-produção, cinematografia, edição de pós-produção, motion graphics e muito mais. Damos vida à sua visão com criatividade e precisão."
           buttonHref="#"
           id="services"
-          backgroundImage="https://s.studiobinder.com/wp-content/uploads/2025/09/Ground-Level-Shot-Example-Ground-level-camera-angle-from-Kill-Bill-Vol-1.jpg"
+          backgroundImage="https://i.imgur.com/zodIQk4.jpeg"
         />
         <OverlaySection title="Sobre nós"
           headline="Somos uma empresa júnior de audiovisual do DF. "
@@ -37,7 +37,6 @@ export default function Home() {
           id="about"
           backgroundImage="https://www.pupilaaudiovisual.com.br/assets/Bastidores.png"
         />
-        <section className="h-screen bg-zinc-900" /> {/* Seção vazia para teste de scroll */}
     </main>
   );
 }

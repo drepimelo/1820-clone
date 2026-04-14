@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import SmoothScroll from "./components/SmoothScroll";
 import Hero from "./components/Hero";
 import OverlaySection from "./components/OverlaySection";
+import Footer from "./components/Footer";
 
 // Configuramos a fonte
 const inter = Inter({ 
@@ -32,6 +33,7 @@ export default function RootLayout({
           {children}
         </SmoothScroll>
 
+        <Footer />
       </body>
     </html>
   );
