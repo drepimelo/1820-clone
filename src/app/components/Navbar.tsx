@@ -4,7 +4,7 @@ import { useState, useRef } from 'react';
 import { motion, useMotionValue, useSpring, useMotionTemplate } from 'framer-motion';
 import MenuMobile from './MenuMobile';
 
-export default function Navbar() {
+export default function Navbar({hide}: { hide: boolean }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -54,56 +54,67 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full z-[999] flex justify-between items-start px-4 py-4 text-white pointer-events-none mt-0">
-        
-        {/* LADO ESQUERDO: Menu Vertical */}
-        <div className="flex flex-col gap-1 text-[12px] font-bold tracking-tight uppercase pointer-events-auto">
-          {['Portfolio', 'Trabalhos', 'Sobre', 'Bastidores'].map((item) => (
-            <a key={item} href="#" className="group flex items-center gap-2 w-fit">
-              <span className="block h-[1px] bg-red-600 w-0 transition-all duration-500 group-hover:w-4" />
-              <span className="transition-all duration-500 group-hover:translate-x-1 hover:text-red-600">{item}</span>
-            </a>
-          ))}
-        </div>
-
-        {/* CENTRO: Logo com Efeito Interno Circular */}
-        <div 
-          className="absolute left-1/2 -translate-x-1/2 top-4 pointer-events-auto cursor-pointer flex items-center justify-center"
-          style={{ width: '165px', height: '48px' }} // Proporção exata do SVG Pupila
-          ref={containerRef}
-          onMouseMove={handleMouseMove}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          {/* Logo Base (Branca) */}
-          <div className="absolute inset-0">
-            <PupilaSVG color="white" />
+      <motion.nav 
+        // Animação de saída da Navbar
+        initial={{ y: 0, opacity: 1 }}
+        animate={{ 
+          y: hide ? -100 : 0, 
+          opacity: hide ? 0 : 1 
+        }}
+        transition={{ duration: 0.5, ease: [0.76, 0, 0.24, 1] }}
+        className="fixed top-0 left-0 w-full z-[999] flex justify-between items-start px-4 py-4 text-white pointer-events-none mt-0"
+      >      
+        <nav className="fixed top-0 left-0 w-full z-[999] flex justify-between items-start px-4 py-4 text-white pointer-events-none mt-0">
+          
+          {/* LADO ESQUERDO: Menu Vertical */}
+          <div className="flex flex-col gap-1 text-[12px] font-bold tracking-tight uppercase pointer-events-auto">
+            {['Portfolio', 'Trabalhos', 'Sobre', 'Bastidores'].map((item) => (
+              <a key={item} href="#" className="group flex items-center gap-2 w-fit">
+                <span className="block h-[1px] bg-red-600 w-0 transition-all duration-500 group-hover:w-4" />
+                <span className="transition-all duration-500 group-hover:translate-x-1 hover:text-red-600">{item}</span>
+              </a>
+            ))}
           </div>
 
-          {/* Logo Revelada (Vermelha) */}
-          <motion.div 
-            className="absolute inset-0"
-            style={{ clipPath }} // Referência dinâmica via useMotionTemplate
+          {/* CENTRO: Logo com Efeito Interno Circular */}
+          <div 
+            className="absolute left-1/2 -translate-x-1/2 top-4 pointer-events-auto cursor-pointer flex items-center justify-center"
+            style={{ width: '165px', height: '48px' }} // Proporção exata do SVG Pupila
+            ref={containerRef}
+            onMouseMove={handleMouseMove}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
-            <PupilaSVG color="#dc2626" />
-          </motion.div>
-        </div>
+            {/* Logo Base (Branca) */}
+            <div className="absolute inset-0">
+              <PupilaSVG color="white" />
+            </div>
 
-        {/* DIREITO: Botões */}
-        <div className="flex gap-3">
-          <button className="bg-white/10 backdrop-blur-md border border-white/40 px-1.5 py-1 text-[12px] font-bold tracking-tighter hover:bg-red-600 hover:text-black transition-all duration-300 uppercase pointer-events-auto cursor-pointer">
-            Contato
-          </button>
-          <button 
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="bg-white/10 backdrop-blur-md border border-white/40 px-3 py-1 text-[12px] font-bold tracking-tighter hover:bg-red-600 hover:text-black transition-all duration-300 uppercase pointer-events-auto z-90 cursor-pointer"
-          >
-            {isMenuOpen ? 'Voltar' : 'Menu'}
-          </button>
-        </div>
-      </nav>
+            {/* Logo Revelada (Vermelha) */}
+            <motion.div 
+              className="absolute inset-0"
+              style={{ clipPath }} // Referência dinâmica via useMotionTemplate
+            >
+              <PupilaSVG color="#dc2626" />
+            </motion.div>
+          </div>
 
-      <MenuMobile isOpen={isMenuOpen} />
+          {/* DIREITO: Botões */}
+          <div className="flex gap-3">
+            <button className="bg-white/10 backdrop-blur-md border border-white/40 px-1.5 py-1 text-[12px] font-bold tracking-tighter hover:bg-red-600 hover:text-black transition-all duration-300 uppercase pointer-events-auto cursor-pointer">
+              Contato
+            </button>
+            <button 
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="bg-white/10 backdrop-blur-md border border-white/40 px-3 py-1 text-[12px] font-bold tracking-tighter hover:bg-red-600 hover:text-black transition-all duration-300 uppercase pointer-events-auto z-90 cursor-pointer"
+            >
+              {isMenuOpen ? 'Voltar' : 'Menu'}
+            </button>
+          </div>
+        </nav>
+
+        <MenuMobile isOpen={isMenuOpen} />
+      </motion.nav>
     </>
   );
 }

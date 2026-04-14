@@ -6,6 +6,7 @@ import SmoothScroll from "./components/SmoothScroll";
 import Hero from "./components/Hero";
 import OverlaySection from "./components/OverlaySection";
 import Footer from "./components/Footer";
+import ClientLayout from "./components/ClientLayout";
 
 // Configuramos a fonte
 const inter = Inter({ 
@@ -27,13 +28,11 @@ export default function RootLayout({
     <html lang="pt-br">
       {/* Adicionamos a classe da fonte no body */}
       <body className={`${inter.className} bg-black text-white antialiased`}>
-        <Navbar />
-
-        <SmoothScroll>
-          {children}
-        </SmoothScroll>
-
-        <Footer />
+        <ClientLayout>
+          <SmoothScroll>
+            {children}
+          </SmoothScroll>
+        </ClientLayout>
       </body>
     </html>
   );
