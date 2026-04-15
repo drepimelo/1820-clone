@@ -4,6 +4,7 @@ import './globals.css';
 import Navbar from "./components/Navbar";
 import SmoothScroll from "./components/SmoothScroll";
 import Footer from "./components/Footer";
+import Cursor from "./components/Cursor"; // Importe o novo componente
 
 // Configuramos a fonte
 const inter = Inter({ 
@@ -28,9 +29,10 @@ export default function RootLayout({
         <Navbar />
 
         <SmoothScroll>
+          
           {children}
         </SmoothScroll>
-
+        <Cursor />
         <Footer />
       </body>
     </html>
