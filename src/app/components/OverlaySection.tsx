@@ -22,7 +22,7 @@ export default function OverlaySection({
   text_content
 }: OverlaySectionProps) {
   return (
-    <section className="relative min-h-screen sticky top-0 overflow-hidden uppercase font-bold tracking-tight" id={id}>
+    <section className="sticky min-h-screen top-0 overflow-hidden uppercase font-bold tracking-tight" id={id}>
       
       {/* Background */}
       <div

@@ -3,8 +3,6 @@ import { Inter } from "next/font/google"; // Importamos a fonte do Google
 import './globals.css';
 import Navbar from "./components/Navbar";
 import SmoothScroll from "./components/SmoothScroll";
-import Hero from "./components/Hero";
-import OverlaySection from "./components/OverlaySection";
 import Footer from "./components/Footer";
 
 // Configuramos a fonte

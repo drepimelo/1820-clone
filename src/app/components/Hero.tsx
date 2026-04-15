@@ -20,7 +20,7 @@ export default function Hero() {
 
   return (
     
-    <section ref={container} className="h-screen flex items-center justify-center bg-black z-0 overflow-hidden sticky top-0">
+    <section ref={container} className="h-screen flex items-center justify-center bg-black overflow-hidden relative z-20">
       <h1 className="hero-title text-7xl font-bold uppercase tracking-tighter z-1">
         Pupila Audiovisual
       </h1>
