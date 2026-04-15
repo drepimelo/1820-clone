@@ -50,7 +50,7 @@ export default function Footer() {
   return (
     <footer 
       ref={containerRef} 
-      className="sticky top-0 z-50 min-h-screen top-0 overflow-hidden w-full bg-red-500 flex flex-col items-center justify-center"
+      className="sticky bottom-0 z-0 h-screen w-full bg-red-500 flex flex-col items-center justify-center"
     >
       {/* Camada de Fundo: Texto PUPILA */}
       <div 

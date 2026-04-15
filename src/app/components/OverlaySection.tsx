@@ -10,6 +10,7 @@ type OverlaySectionProps = {
   backgroundImage: string
   id: string
   text_content: string
+  zIndex?: number // nova prop
 }
 
 export default function OverlaySection({
@@ -19,10 +20,11 @@ export default function OverlaySection({
   buttonHref,
   backgroundImage,
   id,
-  text_content
+  text_content,
+  zIndex = 10
 }: OverlaySectionProps) {
   return (
-    <section className="sticky min-h-screen top-0 overflow-hidden uppercase font-bold tracking-tight" id={id}>
+    <section className="sticky top-0 min-h-screen overflow-hidden uppercase font-bold tracking-tight" id={id} style={{ zIndex }}>
       
       {/* Background */}
       <div
